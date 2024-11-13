@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+Удаление статьи.
+{% endblock %}
+
+{% block content %}
+<div class="features">
+    {% if user.is_authenticated %}
+    <form method="post">
+        {% csrf_token %}
+        <h1>Удаление статьи.</h1> <br><br>
+        <button class="btn btn-danger" type="submit">Удалить статью.</button><br><br>
+        <a href="{% url 'news_home' %}" class="btn btn-success">Отмена</a>
+    </form>
+
+    {% else %}
+    Not Found
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+Новости на сайте
+{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Новости на сайте</h1>
+
+    {% if news %}
+    <div class="news-container">
+        {% for el in news %}
+        <div class="news-item alert alert-warning">
+            <h4>{{ el.name }}</h4>
+            <p>{{ el.price }}</p>
+            <span>{{ el.date }}</span><br>
+            <span>Id: {{ el.id }}</span> <br>
+            {% if el.cover %}
+            <img src="{{ el.cover.url }}" alt="Картинка поста" class="news-image"> <br>
+            {% endif %}
+            <a href="{% url 'news-detail' el.id %}" class="btn btn-warning">Читать далее</a>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>Записей пока что нет.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

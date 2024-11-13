@@ -1,0 +1,59 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+Главная | Раз и Навсегда
+{% endblock %}
+
+{% block content %}
+<div class="index-main-container">
+    <div class="content-wrapper">
+        <div class="image-box">
+            <img src="{% static 'main/img/white-sam.png' %}" alt="Image 1">
+            <div class="info-box">
+                <h2>Собери свой набор</h2>
+                <div class="image-with-caption-container">
+                    <div class="image-with-caption">
+                        <img src="{% static 'main/img/white_scabbard.jpg' %}" alt="Scabbard">
+                        <p>Ножны</p>
+                    </div>
+                    <div class="image-with-caption">
+                        <img src="{% static 'main/img/white_stand.jpg' %}" alt="Stand">
+                        <p>Подставка</p>
+                    </div>
+                    <div class="image-with-caption">
+                        <img src="{% static 'main/img/white_sword.jpg' %}" alt="Sword">
+                        <p>Рожок</p>
+                    </div>
+                </div>
+                <a href="" class="btn btn-primary">Подробнее</a>
+            </div>
+        </div>
+
+        <h1>На чьей стороне ты?</h1>
+
+        <div class="image-box">
+            <img src="{% static 'main/img/black-sam.png' %}" alt="Image 2">
+            <div class="info-box">
+                <h2>Собери свой набор</h2>
+                <div class="image-with-caption-container">
+                    <div class="image-with-caption">
+                        <img src="{% static 'main/img/black_scabbard.jpg' %}" alt="Scabbard">
+                        <p>Ножны</p>
+                    </div>
+                    <div class="image-with-caption">
+                        <img src="{% static 'main/img/black_stand.jpg' %}" alt="Stand">
+                        <p>Подставка</p>
+                    </div>
+                    <div class="image-with-caption">
+                        <img src="{% static 'main/img/black_sword.jpg' %}" alt="Sword">
+                        <p>Рожок</p>
+                    </div>
+                </div>
+                <a href="" class="btn btn-primary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div></div>
+{% endblock %}

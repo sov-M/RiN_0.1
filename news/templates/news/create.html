@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+Создание товара.
+{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Создание товара.</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <h3>Добавить изображения</h3>
+        <input type="file" name="images" multiple accept="image/*"> <!-- Поле для загрузки нескольких изображений -->
+
+        <span>{{ error }}</span>
+        <button class="btn btn-success" type="submit">Отправить товар.</button>
+    </form>
+</div>
+{% endblock %}

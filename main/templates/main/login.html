@@ -1,0 +1,28 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+Авторизация
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="form-container">
+            <form method="POST">
+                <div class="input-block">
+                    <label for="login">Введите логин</label>
+                    <input id="login" type="text" name="login">
+                </div>
+                <div class="input-block">
+                    <label for="password">Пароль</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                {% csrf_token %}
+                    <div class="button-block">
+                        <button>Войти.</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}
