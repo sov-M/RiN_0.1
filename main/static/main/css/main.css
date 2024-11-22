@@ -21,8 +21,6 @@ header {
     color: #ffffff;
 }
 
-
-
 .main-header {
     top: 0;
     z-index: 1000;
@@ -50,7 +48,6 @@ header {
     position: relative;
 }
 
-
 .nav-info {
     /* border: 3px solid green; */
     margin-top: 20px;
@@ -69,8 +66,6 @@ header {
     justify-content: center;
     margin-bottom: 20px;
 }
-
-
 
 .logo img {
     width: auto;
@@ -105,7 +100,7 @@ header {
 }
 
 main {
-    border: 3px solid wheat;
+    border: 1px solid red;
     height: 90em;
     width: 95%;
     margin-top: 10em;
@@ -115,29 +110,30 @@ main {
 
 }
 
+.main-products-home {
+    border: 1px solid green;
+}
+
 .index-main-container {
-    border: 3px solid white;
     width: 100%;
     background-color: rgba(122, 122, 122, 0.767);
     margin: auto;
     text-align: center;
+    margin-bottom: 15px;
 }
 
-.content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.index-main-container {
-    border: 3px solid white;
+.index-catalog-container {
+    border: 1px solid green;
     width: 100%;
-    background-color: rgba(122, 122, 122, 0.767);
+    height: 23em;
+    background-color: #f8f9fa;
     margin: auto;
+    padding: auto;
     text-align: center;
 }
 
 .content-wrapper {
+    border: 1px solid blue;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -257,163 +253,33 @@ main {
     background-color: #0056b3;
 }
 
-.news-container {
+/*=====================*/
+.products-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
+    padding: 10px;
+    height: 23em;
+    border: 1px solid orange;
 }
 
-.news-item {
-    flex: 0 1 calc(33.33% - 20px);
+.products-item {
+    flex: 0 1 calc(20% - 20px);
     margin: 10px 0;
+    margin-left: 10px 0;
     box-sizing: border-box;
     background-color: #f8f9fa;
-    padding: 15px;
     border: 1px solid #ddd;
     text-align: center;
+    height: 21em;
+    border: 1px solid palevioletred;
 }
 
-.news-image {
+.products-item span {
+    font-size: 13px;
+}
+
+.products-image {
     max-width: 100%;
-    height: auto;
+    height: 80px;
 }
-
-/* aside {
-    position: absolute;
-    top: 100px;
-    background: #181818;
-    width: 20%;
-    padding: 2.5%;
-    height: 100vh;
-    color: #fff;
-    border-right: 5px solid #4d4d4d;
-}
-
-
-aside img {
-    width: 82px;
-    float: left;
-}
-
-aside .logo {
-    font-size: 40px;
-    margin-left: 10px;
-    font-weight: bold;
-    position: relative;
-    top: 25px;
-}
-
-aside h3 {
-    margin-top: 50px;
-    font-size: 28px;
-}
-
-aside ul {
-    list-style: none;
-}
-
-aside ul li {
-    color: #fff;
-    display: block;
-    margin-top: 20px;
-    transition: transform 0.6s ease;
-}
-
-aside a {
-    text-decoration: none;
-}
-
-aside ul li:hover,
-aside ul a:hover {
-    color: #eb5959;
-    transform: scale(1.1);
-}
-
-main .features {
-    float: left;
-    color: #fff;
-    margin-top: 100px;
-    text-align: center;
-    width: 75%;
-    margin-left: 25%;
-}
-
-main .features h1 {
-    font-size: 50px;
-}
-
-main .features p {
-    max-width: 400px;
-    margin: 20px auto;
-}
-
-main .features a {
-    color: #181818;
-    text-decoration: none;
-}
-
-main .features a:hover {
-    color: #eb5959;
-}
-
-main .features button:hover {
-    transform: scale(1.2);
-}
-
-main .features img {
-    width: 300px;
-    height: 189px;
-}
-
-.alert-warning {
-    float: left;
-    clear: both;
-    width: 400px;
-    margin: 20px auto;
-    text-align: center;
-}
-
-.alert-warning span {
-    float: right;
-}
-
-form {
-    margin-left: 32%;
-    width: 500px;
-    margin-top: 50px;
-}
-
-.news-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.news-item {
-    flex: 0 1 calc(33.33% - 20px);
-    margin: 10px 0;
-    box-sizing: border-box;
-    background-color: #f8f9fa;
-    padding: 15px;
-    border: 1px solid #ddd;
-    text-align: center;
-}
-
-.news-image {
-    max-width: 100%;
-    height: auto;
-}
-
-@media screen and (max-width: 768px) {
-    .news-item {
-        flex: 0 1 calc(50% - 20px);
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .news-item {
-        flex: 0 1 100%;
-    }
-}  */

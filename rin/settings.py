@@ -31,15 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'django_cleanup.apps.CleanupConfig',
-    'main',
-    'news',
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "django_cleanup.apps.CleanupConfig",
+    "main",
+    "products",
 ]
 
 MIDDLEWARE = [
@@ -130,5 +130,5 @@ STATICFULES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL = 'news/media/' 
-MEDIA_ROOT = BASE_DIR / 'news/media'
+MEDIA_URL = "products/media/"
+MEDIA_ROOT = BASE_DIR / "products/media"

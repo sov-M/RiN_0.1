@@ -7,6 +7,7 @@
 
 {% block content %}
 <div class="index-main-container">
+
     <div class="content-wrapper">
         <div class="image-box">
             <img src="{% static 'main/img/white-sam.png' %}" alt="Image 1">
@@ -26,7 +27,7 @@
                         <p>Рожок</p>
                     </div>
                 </div>
-                <a href="" class="btn btn-primary">Подробнее</a>
+                <a href="{% url 'products_home'%}" value="load_nabor" class="btn btn-primary">Подробнее</a>
             </div>
         </div>
 
@@ -50,10 +51,28 @@
                         <p>Рожок</p>
                     </div>
                 </div>
-                <a href="" class="btn btn-primary">Подробнее</a>
+                <a href="{% url 'products_home'%}" value="load_nabor" class="btn btn-primary">Подробнее</a>
             </div>
         </div>
     </div>
 </div>
-
+<div class="index-catalog-container">
+    {% if products %}
+    <div class="products-container">
+        {% for el in products %}
+        <div class="products-item alert alert-warning">
+            <p>{{ el.name }}</p>
+            <p>{{ el.price }} рублей.</p>
+            <span>{{ el.description|slice:":100" }}...</span> <br>
+            {% if el.cover %}
+            <img src="{{ el.cover.url }}" alt="Картинка поста" class="products-image"> <br> <br>
+            {% endif %}
+            <a href="{% url 'products-detail' el.id %}" class="btn btn-warning">Читать далее</a>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>Записей пока что нет.</p>
+    {% endif %}
+</div>
 {% endblock %}

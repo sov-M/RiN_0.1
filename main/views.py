@@ -1,10 +1,15 @@
 from django.contrib.auth import authenticate, login as user_login, logout as user_logout
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from products.models import Articles  # Импортируем модель Articles из приложения products
 
 
 def index(request):
     return render(request, 'main/index.html')
+
+
+def test(request):
+    return render(request, "main/test.html")
 
 
 def about(request):
@@ -36,3 +41,10 @@ def login(request):
 def logout(request):
     user_logout(request)
     return HttpResponseRedirect('/')
+
+
+def index(request):
+    products = Articles.objects.order_by('?')[:5]
+    # filter(pk__in=[1,6,9])
+    # order_by("-price")
+    return render(request, "main/index.html", {"products": products})
