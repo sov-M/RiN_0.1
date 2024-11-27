@@ -1,6 +1,6 @@
 body {
     font-family: Montserrat;
-    background: url("/static/main/img/background.jpg") no-repeat center center fixed;
+    background: url("/static/main/img/sakura-cherry-blossoms.gif") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -9,24 +9,73 @@ a {
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    height: 14%;
+    border: 1px solid black;
     width: 100%;
-    /* border: 3px solid rgb(0, 0, 0); */
-    padding-bottom: 0;
-    background: #201b21;
-    color: #ffffff;
+    height: 8em;
+    display: inline-flex;
+    position: fixed;
+    z-index: 1000;
+    margin-top: 1em;
 }
 
 .main-header {
+    width: 95%;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 50px;
+    margin: auto;
+    background-color: rgba(122, 122, 122, 0.767);
+}
+
+.logo {
+    width: 15%;
+    height: 100%;
+    position: relative;
+    border: 1px solid white;
+
+}
+
+.logo img {
+    width: 70%;
+    height: 80%;
+    float: right;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    margin: auto;
+}
+
+/* 
+header {
+    position: fixed;
+    z-index: 1000;
+    height: 14%;
+    border: 3px solid white;
+    padding-bottom: 0;
+    background: #201b21;
+    color: #ffffff;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+}
+
+.header {
     top: 0;
     z-index: 1000;
     display: flex;
-    width: 100%;
+    width: 95%;
     padding-bottom: 0;
+    border: 1px solid pink;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+
+}
+
+.main-header {
+    border: 1px solid red;
+    width: 100%;
+    height: 45px;
 }
 
 .nav {
@@ -42,38 +91,22 @@ header {
     width: 80%;
 }
 
-.logo {
-    width: 20%;
-    /* border: 3px solid red; */
-    position: relative;
-}
+
 
 .nav-info {
-    /* border: 3px solid green; */
     margin-top: 20px;
     width: 100%;
     text-align: right;
 }
 
 .social-network {
-    /* border: 3px solid orange; */
     width: 7%;
 }
 
 .nav {
-    /* border: 3px solid fuchsia; */
     margin-top: auto;
     justify-content: center;
     margin-bottom: 20px;
-}
-
-.logo img {
-    width: auto;
-    height: auto;
-    float: right;
-    position: absolute;
-    bottom: 0;
-    right: 0;
 }
 
 .cont {
@@ -97,15 +130,12 @@ header {
     color: #eb5959;
     transform: scale(1.08);
 
-}
+} */
 
 main {
     border: 1px solid red;
-    height: 90em;
-    width: 95%;
-    margin-top: 10em;
-    margin-left: auto;
-    margin-right: auto;
+    height: 100%;
+    width: 100%;
     color: #ffffff;
 
 }
@@ -115,16 +145,19 @@ main {
 }
 
 .index-main-container {
-    width: 100%;
+    width: 95%;
     background-color: rgba(122, 122, 122, 0.767);
     margin: auto;
     text-align: center;
     margin-bottom: 15px;
+    margin-top: 10em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .index-catalog-container {
     border: 1px solid green;
-    width: 100%;
+    width: 95%;
     height: 23em;
     background-color: #f8f9fa;
     margin: auto;

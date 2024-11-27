@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} {% endblock %}</title>
-    <link rel="icon" href="{% static 'main/img/logo.jpg' %}">
+    <link rel="icon" href="{% static 'main/img/favicon.ico' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
@@ -19,33 +19,13 @@
 </head>
 
 <body>
-    <header class="main-header">
-        <div class="logo">
-            <a href="{% url 'home'%}"><img src="{% static 'main/img/logo.jpg' %}" alt="logo" class="logo-img"></a>
-        </div>
-
-        <div class="social-network">
-
-        </div>
-        <div class="container">
-            <div class="nav-info">
-
-                <div class="location">
-                    <pre><img src="{% static 'main/img/location.png' %}" alt="location-img"> Набережные Челны, ГСК "Чайка"     <img
-                        src="{% static 'main/img/callme.png' %}" alt="call-img"> +7 987 416 23 27
-</pre>
-                </div>
+    <header class="header">
+        <div class="main-header">
+            <div class="logo">
+                <a href="{% url 'home'%}"><img src="{% static 'main/img/snapedit_1732631955987.png' %}" alt="logo" class="logo-img"></a>
             </div>
-
-            <div class="nav">
-                <a href="{% url 'products_home'%}" class="cont">Каталог</a>
-                <a href="" class="cont">Оставить заказ</a>
-                <a href="" class="cont">Корпоративным клиентам</a>
-                <a href="" class="cont">Контакты</a>
-                <a href="" class="cont">Вопрос/Ответ</a>
-            </div>
-        </div>
     </header>
+
 
 
     <main>
