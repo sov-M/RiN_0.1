@@ -21,9 +21,22 @@
 <body>
     <header class="header">
         <div class="main-header">
-            <div class="logo">
-                <a href="{% url 'home'%}"><img src="{% static 'main/img/snapedit_1732631955987.png' %}" alt="logo" class="logo-img"></a>
+            <div class="head-logo">
+                <a href="{% url 'home'%}"><img src="{% static 'main/img/snapedit_1732631955987.png' %}" alt="logo"
+                        class="logo-img"></a>
             </div>
+            <div class="head-menu">
+                <div class="catalog"><a href="{% url 'products_home'%}" class="">Каталог</a></div>
+                <div class="create-order"><a href="" class="">Оставить заказ</a></div>
+                <div class="about"><a href="" class="">О нас</a></div>
+            </div>
+            <div class="head-info">
+                <div class="adres">
+                    <img src="{% static 'main/img/location.png' %}" alt="head-location" class="head-location"><p>Набережные Челны,
+                    ГСК "Чайка"</p></div>
+                <div class="telephone"><img src="{% static 'main/img/phone.png' %}" alt="head-call" class="head-call">+7 987 416 23 27</div>
+            </div>
+        </div>
     </header>
 
 

@@ -62,12 +62,12 @@
         {% for el in products %}
         <div class="products-item alert alert-warning">
             <p>{{ el.name }}</p>
-            <p>{{ el.price }} рублей.</p>
-            <span>{{ el.description|slice:":100" }}...</span> <br>
+            <p>{{ el.price }} руб.</p>
+            <span>{{ el.description|slice:":75" }}...</span> <br>
             {% if el.cover %}
             <img src="{{ el.cover.url }}" alt="Картинка поста" class="products-image"> <br> <br>
             {% endif %}
-            <a href="{% url 'products-detail' el.id %}" class="btn btn-warning">Читать далее</a>
+            <a href="{% url 'products-detail' el.id %}" class="btn btn-warning">Подробнее</a>
         </div>
         {% endfor %}
     </div>
