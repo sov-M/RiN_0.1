@@ -39,3 +39,4 @@ docker-compose.override.yml
 !Dockerfile
 !docker-compose.yml
 !requirements.txt
+! 
