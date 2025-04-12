@@ -1,0 +1,50 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+{{ article.title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="features">
+    <div class="alert alert-warning">
+        {% if article.name %}
+        <h1>Название: {{ article.name }}</h1>
+        {% endif %}
+
+
+
+        {% if article.full_text %}
+        <p>Текст:{{ article.full_text }}</p> <br>
+        {% endif %}
+
+        {% if article.cover %}
+        <img src="{{ article.cover.url }}" alt="Картинка поста"> <br>
+        {% endif %}
+
+        {% if article.date %}
+        <p>{{ article.date }}</p>
+        {% endif %}
+    </div>
+
+    <div>
+        <a href="{% url 'products_home' %}" class="btn btn-info">Вернуться назад</a>
+    </div><br><br>
+
+    <div>
+        <a href="{% url 'products-update' article.id %}" class="btn btn-warning">Редактировать статью</a>
+    </div><br><br>
+
+    <div>
+        {% if user.is_authenticated %}
+        <a href="{% url 'products-delete' article.id %}" class="btn btn-danger">Удалить статью</a>
+        {% endif %}
+    </div>
+    <div>
+        {% for image in article.images.all %}
+        <img src="{{ image.image.url }}" alt="Изображение товара">
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

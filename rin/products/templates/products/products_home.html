@@ -1,0 +1,53 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+Каталог на сайте
+{% endblock %}
+
+{% block content %}
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="action" value="-price">Все товары по убыванию цены</button>
+        <button type="submit" name="action" value="price">Все товары по возрастанию цены</button>
+        <button type="submit" name="action" value="load_obuvnoy-rojok">Обувной рожок</button>
+        <button type="submit" name="action" value="load_obuvnoy-mech">Обувной меч</button>
+        <button type="submit" name="action" value="load_nabor">Наборы</button>
+        <button type="submit" name="action" value="load_podves">Подвески/Крючки</button>
+        <button type="submit" name="action" value="load_kobura">Кобура</button>
+        <button type="submit" name="action" value="load_nojny">Ножны</button>
+        <button type="submit" name="action" value="load_gardy">Гарды</button>
+        <button type="submit" name="action" value="load_upakovka">Упаковка</button>
+        <!-- <button type="submit" name="action" value="load_other"></button> -->
+    
+    </form>
+
+
+
+<div class="main-products-home">
+    <h1>Каталог на сайте</h1>
+
+    {% if products %}
+    <div class="products-container">
+        {% for el in products %}
+        <div class="products-item alert alert-warning">
+            <h4>{{ el.name }}</h4>
+            <p>{{ el.price }}</p>
+            <span>{{ el.date }}</span><br>
+            <span>Артикул: {{ el.id }}</span> <br>
+            {% if el.cover %}
+            <img src="{{ el.cover.url }}" alt="Картинка поста" class="products-image"> <br>
+            {% endif %}
+            <a href="{% url 'products-detail' el.id %}" class="btn btn-warning">Читать далее</a>
+        </div>
+        {% endfor %}
+
+
+    </div>
+    {% else %}
+    <p>Записей пока что нет.</p>
+    {% endif %}
+
+</div>
+
+{% endblock %}

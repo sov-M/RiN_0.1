@@ -1,0 +1,424 @@
+body {
+    font-family: Montserrat;
+    background: url("/static/main/img/sakura-cherry-blossoms.gif") no-repeat center center fixed;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 105px;
+    display: inline-flex;
+    position: fixed;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+.main-header {
+    width: 95%;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 50px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.720);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head-logo {
+    width: 13%;
+    height: 100%;
+    position: relative;
+    /* border: 1px solid white; */
+    align-items: center;
+}
+
+.head-logo img {
+    width: 100px;
+    height: 100px;
+    float: right;
+    position: absolute;
+    bottom: auto;
+    right: 10%;
+    margin: auto;
+    /* border: 1px solid white; */
+}
+
+.head-menu {
+    font-family: "Marck Script", cursive;
+    font-size: 30px;
+    color: rgba(253, 253, 253, 0.705);
+    font-style: normal;
+    /* border: 1px solid red; */
+    width: 33%;
+    max-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.head-menu div:hover {
+    background-color: bisque;
+    color: deeppink;
+    border: 2px solid deeppink;
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 10px deeppink;
+}
+
+.head-menu div:hover a {
+    color: deeppink;
+}
+
+.catalog,
+.create-order,
+.about {
+    border: 1px solid deeppink;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+.head-info {
+    /* border: 1px solid green; */
+    width: 22%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Courier New', Courier, monospace, cursive;
+    font-size: 15px;
+}
+
+.adres,
+.telephone {
+    width: 100%;
+    height: 40%;
+    /* border: 1px solid yellow; */
+    color: white;
+
+    /* Flexbox настройки */
+    display: flex;
+    align-items: center;
+    /* Центровка по вертикали */
+    gap: 10px;
+    /* Отступ между изображением и текстом */
+}
+
+.adres img,
+.telephone img {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    /* Запрещаем уменьшение изображения */
+}
+
+.adres p {
+    margin: 0;
+    /* Убираем отступы */
+}
+
+
+/* 
+.head-location {
+    display: grid;
+    align-items: end;
+} */
+
+
+
+/* 
+header {
+    position: fixed;
+    z-index: 1000;
+    height: 14%;
+    border: 3px solid white;
+    padding-bottom: 0;
+    background: #201b21;
+    color: #ffffff;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+}
+
+.header {
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    width: 95%;
+    padding-bottom: 0;
+    border: 1px solid pink;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+
+}
+
+.main-header {
+    border: 1px solid red;
+    width: 100%;
+    height: 45px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+
+
+.nav-info {
+    margin-top: 20px;
+    width: 100%;
+    text-align: right;
+}
+
+.social-network {
+    width: 7%;
+}
+
+.nav {
+    margin-top: auto;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cont {
+    padding: 0 40px;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.location img {
+    width: 2%;
+    height: 2%;
+}
+
+.nav a {
+    font-size: 20px;
+    color: #ffffff;
+    border: 0.5px solid white;
+}
+
+.nav a:hover {
+    color: #eb5959;
+    transform: scale(1.08);
+
+} */
+
+main {
+    border: 1px solid red;
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+
+}
+
+.index-main-container {
+    width: 95%;
+    background-color: rgba(0, 0, 0, 0.720);
+    margin: auto;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 7.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.index-catalog-container {
+    /* border: 1px solid green; */
+    width: 95%;
+    height: 23em;
+    background-color: rgba(0, 0, 0, 0.720);
+    margin: auto;
+    padding: auto;
+    text-align: center;
+}
+
+.content-wrapper {
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.index-main-container h1 {
+    font-family: "Comforter Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 60px;
+    margin: 0 20px;
+}
+
+.info-box {
+    font-family: "Marck Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 80px;
+    margin: 0 20px;
+}
+
+.image-box {
+    position: relative;
+    width: 25em;
+    height: 44em;
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.image-box:hover img:first-of-type {
+    filter: brightness(0%);
+    /* Уменьшаем яркость только для первого изображения */
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+}
+
+.info-box img {
+    filter: none !important;
+    /* Отключаем фильтр для изображений внутри info-box */
+    opacity: 1;
+    transition: none;
+}
+
+.info-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.image-box:hover .info-box {
+    opacity: 1;
+}
+
+.info-box h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.image-with-caption-container {
+    display: flex;
+    justify-content: space-between;
+    /* Устанавливаем направление строкой */
+    gap: 10px;
+}
+
+.image-with-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.image-with-caption img {
+    width: 90px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.image-with-caption p {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+}
+
+.info-box .btn {
+    margin-top: 7em;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.info-box .btn:hover {
+    background-color: #0056b3;
+}
+
+/*=====================*/
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    height: 23em;
+    /* border: 1px solid orange; */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.products-item {
+    flex: 0 1 calc(20% - 20px);
+    margin: 10px 0;
+    margin-left: 10px 0;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid #ddd;
+    text-align: center;
+    height: 21em;
+    border: 1px solid palevioletred;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.products-item span {
+    font-size: 13px;
+}
+
+.products-image {
+    max-width: 100%;
+    height: 80px;
+}
+
+.products-item {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 20px;
+
+}
+
+.products-item:hover {
+    background-color: bisque;
+    color: deeppink;
+    border: 0.3px solid azure;
+    transform: translateY(-5px);
+    border: 2px solid deeppink;
+    box-shadow: 5px 5px 10px deeppink;
+    font-family: 'Courier New', Courier, monospace;
+}

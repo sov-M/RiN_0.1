@@ -1,0 +1,7 @@
+{% extends 'main/layout.html' %}
+
+<title>Авторизован</title>
+
+{% block content %}
+    {% {{request.user.username}} %}
+{% endblock %}

@@ -1,0 +1,42 @@
+# Игнорируем файлы IDE и ОС
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Виртуальное окружение Python
+venv/
+.env/
+
+# Файлы Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+
+# Базы данных
+*.sqlite3
+*.db
+
+# Статика и медиа (если они генерируются автоматически)
+static/
+media/
+
+# Логи и кэш
+*.log
+*.cache
+
+# Файлы зависимостей (если используете Poetry/Pipenv)
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# Docker-файлы (кроме нужных)
+docker-compose.override.yml
+
+# Исключения (не игнорируем эти файлы)
+!.gitignore
+!Dockerfile
+!docker-compose.yml
+!requirements.txt
+! 

@@ -1,0 +1,78 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+Главная | Раз и Навсегда
+{% endblock %}
+
+{% block content %}
+<div class="index-main-container">
+
+    <div class="content-wrapper">
+        <div class="image-box">
+            <img src="{% static 'main/img/white-sam.png' %}" alt="Image 1">
+            <div class="info-box">
+                <h2>Собери свой набор</h2>
+                <div class="image-with-caption-container">
+                    <div class="image-with-caption">
+                        <img src="{% static 'main/img/white_scabbard.jpg' %}" alt="Scabbard">
+                        <p>Ножны</p>
+                    </div>
+                    <div class="image-with-caption">
+                        <img src="{% static 'main/img/white_stand.jpg' %}" alt="Stand">
+                        <p>Подставка</p>
+                    </div>
+                    <div class="image-with-caption">
+                        <img src="{% static 'main/img/white_sword.jpg' %}" alt="Sword">
+                        <p>Рожок</p>
+                    </div>
+                </div>
+                <a href="{% url 'products_home'%}" value="load_nabor" class="btn btn-primary">Подробнее</a>
+            </div>
+        </div>
+
+        <h1>На чьей стороне ты?</h1>
+
+        <div class="image-box">
+            <img src="{% static 'main/img/black-sam.png' %}" alt="Image 2">
+            <div class="info-box">
+                <h2>Собери свой набор</h2>
+                <div class="image-with-caption-container">
+                    <div class="image-with-caption">
+                        <img src="{% static 'main/img/black_scabbard.jpg' %}" alt="Scabbard">
+                        <p>Ножны</p>
+                    </div>
+                    <div class="image-with-caption">
+                        <img src="{% static 'main/img/black_stand.jpg' %}" alt="Stand">
+                        <p>Подставка</p>
+                    </div>
+                    <div class="image-with-caption">
+                        <img src="{% static 'main/img/black_sword.jpg' %}" alt="Sword">
+                        <p>Рожок</p>
+                    </div>
+                </div>
+                <a href="{% url 'products_home'%}" value="load_nabor" class="btn btn-primary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="index-catalog-container">
+    {% if products %}
+    <div class="products-container">
+        {% for el in products %}
+        <div class="products-item alert alert-warning">
+            <p>{{ el.name }}</p>
+            <p>{{ el.price }} руб.</p>
+            <span>{{ el.description|slice:":75" }}...</span> <br>
+            {% if el.cover %}
+            <img src="{{ el.cover.url }}" alt="Картинка поста" class="products-image"> <br> <br>
+            {% endif %}
+            <a href="{% url 'products-detail' el.id %}" class="btn btn-warning">Подробнее</a>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>Записей пока что нет.</p>
+    {% endif %}
+</div>
+{% endblock %}
